@@ -18,3 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['name', 'role', 'user_token', 'organization']
+
+class OrgTokenSerializer(serializers.Serializer):
+    org_id = serializers.CharField(max_length=36)
+    token = serializers.CharField()

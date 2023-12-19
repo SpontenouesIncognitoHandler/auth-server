@@ -5,6 +5,7 @@ from .views import (
     OrganizationDetailView,
     UserListCreateView,
     UserDetailView,
+    VerifyOrgTokenView
    
 )
 urlpatterns = [
@@ -12,5 +13,7 @@ urlpatterns = [
     path('organizations/<int:pk>/', OrganizationDetailView.as_view(), name='organization-detail'),
     path('users/', UserListCreateView.as_view(), name='user-list-create'),
     path('users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
+    path('verify/', VerifyOrgTokenView.as_view(), name='verify-org-token'),
+
    
 ]
